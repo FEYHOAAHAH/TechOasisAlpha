@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <div style="margin-bottom: 50px;">
+    {% for product in adproducts %}
+       <h1>{{ product.title }} - {{ product.price }}$</h1>
+       <h3 style="margin-right: 900px;">Описание и характеристики товара: {{ product.description }}</h3>
+       <h3>Оценка: {{ product.average_score }}</h3>
+       <h3>Отзывы: {{ product.review_description }}</h3>
+       <button type="button"><a href="{% url 'updatep' product.pk %}">Изменить данные</a></button>
+       <button type="button"><a href="{% url 'deletep' product.pk %}">Удалить данные</a></button>
+    {% endfor %}
+       <p><button type="button" style="height: 80px; weight:200px;"><a href="{% url 'createp'  %}">Добавить новый продукт</a></button></p>
+    </div>
+
+</body>
+</html>

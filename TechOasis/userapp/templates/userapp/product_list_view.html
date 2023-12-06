@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Products</title>
+</head>
+
+<body>
+
+    <nav>{{ user }}</nav>
+    <div style="margin-bottom: 50px;">
+    {% for product in products %}
+        <h3>{{ product.title }}  {{ product.price }}$</h3>
+        <h3>Оценка: {{ product.average_score }}</h3>
+        <button type="button"><a href="{% url 'product_detail' product.pk %}">Подробнее</a></button>
+    {% endfor %}
+    </div>
+
+</body>
+</html>

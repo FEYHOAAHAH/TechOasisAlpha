@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{Product.title}} Details</title>
+</head>
+<body>
+ <div style="margin-bottom: 50px;">
+
+        <h1>{{ products.title }} - {{ products.price }}$</h1>
+        <h3 style="margin-right: 900px;">Описание и характеристики товара: {{ products.description }}</h3>
+        <h3>Оценка: {{ products.average_score }}</h3>
+        <h3>Отзывы: {{ products.review_description }}</h3>
+
+        <button type="button"><a href="{% url 'products' %}">Назад</a></button>
+
+ </div>
+</body>
+</html>
